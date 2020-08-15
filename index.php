@@ -1,4 +1,3 @@
-<!DOCTYPE HTML>
 
 <html>
 	<head>
@@ -134,6 +133,16 @@
 							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
 							<div class="split style1">
 								<section>
+									<?php $name = $_POST['name'];
+									$email = $_POST['email'];
+									$message = $_POST['message'];
+									$formcontent="From: $name \n Message: $message";
+									$recipient = "croc1110@hotmail.com";
+									$subject = "Contact Form";
+									$mailheader = "From: $email \r\n";
+									mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
+									echo "Thank You!";
+									?>
 									<form method="POST" action="mail.php">
 										<div class="fields">
 											<div class="field half">
