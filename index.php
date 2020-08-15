@@ -143,7 +143,7 @@
 									mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
 									echo "Thank You!";
 									?>
-									<form method="POST" action="mail.php">
+									<form method="POST" action="">
 										<div class="fields">
 											<div class="field half">
 												<label for="name">Name</label>
